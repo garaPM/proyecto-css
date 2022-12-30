@@ -15,3 +15,69 @@ ul {
   list-style: none;
 }
 /* ENDS RESET */
+
+body {
+	font-family: "Nunitos Sans", sans-serif;
+	display: grid;
+	grid-template-areas:
+		"header"
+		"main"
+		"footer";
+	grid-template-columns: 1fr;
+	grid-template-rows: 100vh 1fr 70px;
+	gap: 2rem;
+}
+
+/* HEADER */
+
+header {
+	grid-area: header;
+	background-image: url("../img/new-zealand-hero.jpg");
+	background-color: black;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	padding: 10rem 0;
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+header h1 {
+	color: white;
+	font-size: 3rem;
+	text-transform: uppercase;
+	text-shadow: 2px 2px 7px #404040;
+}
+
+header p {
+	color: rgb(219, 160, 12);
+	font-size: 2rem;
+	font-weight: bolder;
+	order: -1;
+}
+
+header nav {
+	order: 3;
+	margin-top: 3rem;
+}
+
+header nav ul {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.5rem;
+	justify-content: center;
+}
+
+header nav ul a {
+	color: white;
+	/* text-decoration: none; */
+	padding: 0.5rem;
+	text-transform: uppercase;
+}
+
+header nav ul a:hover {
+	color: orange;
+	transition: 0.3s all;
+}
