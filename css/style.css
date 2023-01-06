@@ -25,7 +25,7 @@ body {
 		"footer";
 	grid-template-columns: 1fr;
 	grid-template-rows: 100vh 1fr 70px;
-	gap: 2rem;
+	/* gap: 2rem; */
 }
 
 /* HEADER */
@@ -180,6 +180,53 @@ article.place-to-visit section:hover > img {
 	filter: grayscale(0);
 }
 
+/* SERVICES PAGE */
+
+.service-box {
+	display: grid;
+	grid-template-columns: 1fr;
+	gap: 2rem 0rem;
+}
+.service {
+	min-height: 15rem;
+	min-width: 16rem;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	background-color: orange;
+	color: white;
+	font-size: 2rem;
+	box-shadow: 1px 1px 10px #404040;
+}
+.service > p {
+	margin-top: 1rem;
+}
+
+.service p:last-child {
+	font-size: 5rem;
+	font-weight: bold;
+	background-color: white;
+	width: 100%;
+	color: orange;
+	margin-top: auto;
+	text-align: center;
+	border-radius: 20px 20px 0px 0px;
+	border: 4px solid orange;
+}
+
+
+
+/* FOOTER */
+footer {
+	grid-area: footer;
+	padding: 2rem;
+	background-color: #404040;
+	color: orange;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
 
 
 /* MEDIA QUERIES */
@@ -195,9 +242,14 @@ article.place-to-visit section:hover > img {
 	header nav ul a {
 		font-size: 1.25rem;
 	}
+
+	/* SERVICE PAGE */
+	.service {
+		min-width: 20rem;
+	}
 }
 
-/* FOOTER video 23:00 minutos */
+/* ABOUT PAGE VIDEO 31:22 */
 
 @media screen and (min-width: 1024px) {
 	/* MAIN */
@@ -215,5 +267,20 @@ article.place-to-visit section:hover > img {
 	}
 	.place-to-visit section {
 		width: 45%;
+	}
+}
+
+@media screen and (min-width: 1024px) {
+	/* SERVICE PAGE */
+	.service-box {
+		grid-template-columns: repeat(3, 1fr);
+		grid-template-rows: repeat(4, 7rem);
+		gap: 0rem 2rem;
+	}
+	.service {
+		grid-row: 2/4;
+	}
+	.service:nth-child(2) {
+		grid-row: 1/3;
 	}
 }
